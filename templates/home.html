@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style media="screen">
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #080710;
+        height: 100vh;
+        overflow-y: auto; /* Allow scrolling */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Content area for Get Started and Machine Information */
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+        margin-top: 40px;
+        flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+        padding: 20px;
+    }
+
+    .content * {
+        font-family: "Poppins", sans-serif;
+        color: #ffffff;
+        letter-spacing: 0.5px;
+        outline: none;
+        border: none;
+    }
+
+    .left-box, .right-box {
+        background-color: rgba(255, 255, 255, 0.13);
+        padding: 50px 35px;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        width: 48%;
+    }
+
+    .left-box h1 {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .left-box p {
+        font-size: 18px;
+        margin-top: 30px;
+        color: #e0e0e0;
+    }
+
+    .blue-button {
+        display: inline-block;
+        margin-top: 20px;
+        background-color: #3498db;
+        color: #eaf0fb;
+        padding: 12px 25px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 18px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .blue-button:hover {
+        background-color: #2980b9;
+        transform: translateY(-3px);
+    }
+
+    .right-box h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .right-box p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .link-to-shop {
+        color: #23a2f6;
+        text-decoration: none;
+    }
+
+    .link-to-shop:hover {
+        color: #1845ad;
+    }
+</style>
+
+<!-- Content with Machine Information and Get Started Section -->
+<div class="content">
+    <!-- Left Box: Get Started Section -->
+    <div class="left-box">
+        <h1>Welcome to the Prediction Hub!</h1>
+        <p>Ready to make your prediction? Let's begin by answering a few questions that will guide us in predicting the results.</p>
+        <a href="/start_question" class="blue-button">Get Started</a>
+    </div>
+
+    <!-- Right Box: Machine Information -->
+    <div class="right-box">
+        <h3>How to Monitor Your Health at Home</h3>
+        <p>Monitoring your health at home has become easier with the right devices. Here's how you can check your blood pressure and cholesterol levels:</p>
+
+        <!-- Blood Pressure Monitor Information -->
+        <h4>Blood Pressure Monitor</h4>
+        <p>A blood pressure monitor is essential for regularly tracking your blood pressure at home. There are two main types:</p>
+        <ul>
+            <li><strong>Automatic Arm Blood Pressure Monitors</strong> - These are the most accurate and easy to use. They are designed to inflate the cuff automatically.</li>
+            <li><strong>Automatic Wrist Blood Pressure Monitors</strong> - These are more compact and portable but may not be as accurate as arm monitors.</li>
+        </ul>
+        <p><strong>Where to Buy:</strong> Blood pressure monitors are available on popular e-commerce sites or your local pharmacy.</p>
+
+        <!-- Cholesterol Testing Kit Information -->
+        <h4>Cholesterol Testing Kit</h4>
+        <p>A cholesterol testing kit allows you to monitor your cholesterol levels at home. These kits typically require a small blood sample (fingerstick) and provide results in minutes.</p>
+        <p><strong>Where to Buy:</strong> You can purchase cholesterol testing kits from pharmacies, health stores, or online retailers such as Amazon</a>.</p>
+    </div>
+</div>
+
+{% endblock %}
